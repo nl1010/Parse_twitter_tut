@@ -17,6 +17,30 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        /*
+        [Parse setApplicationId:@"T9FpJzJq6d6ONlTKaEnQthRaCacJVfsYrwYTbWFr"
+        clientKey:@"tFObnkGWxRLv99mm6pNQaVPGv0km4ko1kHqmgFah"];
+        
+        PFObject *testObject = [PFObject objectWithClassName:@"TestObject"];
+        testObject[@"foo"] = @"bar";
+        [testObject saveInBackground];
+        
+        REWRRITE TO SWIFIT: */
+        
+        //link application to the cloud application
+        Parse.setApplicationId("T9FpJzJq6d6ONlTKaEnQthRaCacJVfsYrwYTbWFr", clientKey: "tFObnkGWxRLv99mm6pNQaVPGv0km4ko1kHqmgFah")
+
+        
+        //test
+//        var testObject:PFObject =  PFObject(className: "TestObject")
+//        testObject["foo"] = "bar"
+//        testObject.setObject("user", forKey: "user")
+//        
+//        testObject.save()
+//        
+//        
+        
         return true
     }
 
