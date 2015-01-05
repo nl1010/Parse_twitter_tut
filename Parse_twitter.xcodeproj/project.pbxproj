@@ -32,6 +32,7 @@
 		2C2631541A4CA84900E68B06 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C26313C1A4CA75F00E68B06 /* libsqlite3.dylib */; };
 		2C26315B1A4CB27B00E68B06 /* TimelineTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C26315A1A4CB27B00E68B06 /* TimelineTableViewController.swift */; };
 		2C26315D1A4CB30200E68B06 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C26315C1A4CB30200E68B06 /* ComposeViewController.swift */; };
+		2CF60A691A5A212B0089F511 /* SweetTableViewCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CF60A681A5A212B0089F511 /* SweetTableViewCellController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		2C2631571A4CA88900E68B06 /* Parse_twitter-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Parse_twitter-Bridging-Header.h"; sourceTree = "<group>"; };
 		2C26315A1A4CB27B00E68B06 /* TimelineTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimelineTableViewController.swift; sourceTree = "<group>"; };
 		2C26315C1A4CB30200E68B06 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
+		2CF60A681A5A212B0089F511 /* SweetTableViewCellController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SweetTableViewCellController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +135,7 @@
 		2C2630FD1A4CA02A00E68B06 /* Parse_twitter */ = {
 			isa = PBXGroup;
 			children = (
+				2CF60A681A5A212B0089F511 /* SweetTableViewCellController.swift */,
 				2C2631571A4CA88900E68B06 /* Parse_twitter-Bridging-Header.h */,
 				2C2631001A4CA02A00E68B06 /* AppDelegate.swift */,
 				2C26315C1A4CB30200E68B06 /* ComposeViewController.swift */,
@@ -299,6 +302,7 @@
 				2C26315B1A4CB27B00E68B06 /* TimelineTableViewController.swift in Sources */,
 				2C2631061A4CA02A00E68B06 /* ViewController.swift in Sources */,
 				2C2631011A4CA02A00E68B06 /* AppDelegate.swift in Sources */,
+				2CF60A691A5A212B0089F511 /* SweetTableViewCellController.swift in Sources */,
 				2C2631041A4CA02A00E68B06 /* Parse_twitter.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +510,7 @@
 				2C26311F1A4CA02A00E68B06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C2631201A4CA02A00E68B06 /* Build configuration list for PBXNativeTarget "Parse_twitterTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +519,7 @@
 				2C2631221A4CA02A00E68B06 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

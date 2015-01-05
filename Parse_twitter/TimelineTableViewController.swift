@@ -10,12 +10,70 @@ import UIkit
 
 class TimelineTableViewController: UITableViewController {
     
+    var timeLineData = NSMutableArray()
     
-    /*difference between viewDidApper & viewDidLoad 
-    viewDidAppear only load ONCE when app is opend */
     
+    func loadData(){
+        timeLineData.removeAllObjects() //erase all objs in case of avoding redundent 
+        
+        var findTimeLineData = PFQuery(className: "sweets")
+        findTimeLineData.findObjectsInBackgroundWithBlock { (objects:[AnyObject]! , error:NSError!) -> Void in
+            if (error == nil) {
+                //if touchings sweets class has no error then we can query the time line data
+                for object:PFObject! in objects as [PFObject] {
+                    self.timeLineData.addObject(object)
+                }
+                let array:NSArray = self.timeLineData.reverseObjectEnumerator().allObjects //TICK: reverse the objects to the right order
+                self.timeLineData = array as NSMutableArray
+                
+                /*reloads whole table view that enable to display data (previous load is when opend)*/
+                self.tableView.reloadData()
+                
+            }
+        }
+    }
 
     
+    /*section : use for address book, e.g a-z , 24 sections . If we dont need use address book then we can set section to 1 */
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    /*how many cells we need display*/
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return timeLineData.count
+    }
+    
+//    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+//        <#code#>
+//    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    /*difference between viewDidApper & viewDidLoad
+    viewDidAppear only load ONCE when app is opend */
     override func viewDidAppear(animated: Bool){
         //check if there is a user logged in
         if ((PFUser.currentUser()) == nil){

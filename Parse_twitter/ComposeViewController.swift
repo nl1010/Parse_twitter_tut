@@ -34,7 +34,7 @@ class ComposeViewController: UIViewController {
         var sweet:PFObject =  PFObject(className: "Sweets")
         sweet["contenct"] =  sweetTextView.text
         
-        //sweet["sweeeter"] = PFUser.currentUser()
+        sweet["sweeter"] = PFUser.currentUser()
         
         sweet.save()
         

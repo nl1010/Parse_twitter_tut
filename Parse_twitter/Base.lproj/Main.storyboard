@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="154" id="jfD-y3-cRL">
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="154" id="jfD-y3-cRL" customClass="SweetTableViewCellController" customModule="Parse_twitter" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jfD-y3-cRL" id="WIb-f4-hqV">
                                     <autoresizingMask key="autoresizingMask"/>
@@ -40,6 +40,11 @@
                                         </textView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="sweetTextView" destination="QE7-Wj-1dk" id="ALv-Pz-o6b"/>
+                                    <outlet property="timeStempLable" destination="UCH-Vt-FRo" id="fgW-YQ-Sdq"/>
+                                    <outlet property="usernameLable" destination="Tyc-E5-cTb" id="UKV-cj-ShW"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
